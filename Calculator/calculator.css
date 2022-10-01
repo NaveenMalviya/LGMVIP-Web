@@ -1,0 +1,89 @@
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    background-color: bisque;
+    line-height: 1.6;
+    margin-bottom: 100px;
+    animation: mymove 5s infinite;
+}
+#heading{
+  text-align: center;
+  font-size: larger;
+  font-family: 'Merriweather', serif;
+}
+@keyframes mymove {
+  50% {background-color: blue;}
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    min-height: 500px;
+    padding: 15px;
+    margin-top: 50px;
+    
+}
+#screen {
+    margin-bottom: 100px;
+    text-align: right;
+    color:white;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+  }
+
+#container{
+    width: 400px;
+    border-radius: 15px;
+    border:2px solid orange;
+    background-color: brown;
+    padding: 25px;
+    background-color: black;   
+    margin-top: 50px;
+    
+}
+
+
+.buttons{
+   
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    border-radius: 10px;
+    background-color: black;
+    
+     
+}
+
+.btn {
+    padding: 21px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: var(--btn);
+    font-size: 20px;
+    background-color: rgb(77, 72, 72);
+    color: white;
+    cursor: pointer;
+  } 
+  #AC, #clear{
+    color: orange;
+  }
+  #equal{
+    background-color: orange;
+  }
+
+.btn:hover {
+  background-color: #323330;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
