@@ -1,0 +1,174 @@
+:root{
+    --dark: #374153;
+    --darker: #1f2938;
+    --darkest: #111827;
+    --grey:#6b7280;
+    --light: #eee;
+    --pink: #ec4899;
+    --purple: #8b8b8b;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lucida Sans', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-image: linear-gradient(red,green,orange, yellow); */
+    background-image: linear-gradient(to right, rgb(229, 157, 157),rgb(240, 187, 90),rgb(230, 230, 122),green,rgb(122, 122, 255),rgb(187, 133, 226));
+    color: rgb(221, 220, 128);
+    
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+    background-image: url('bg1.jpg');
+    border-radius: 10px;
+}
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgb(255, 250, 250);
+    margin-bottom: 1rem;
+}
+#date{
+    margin-top: -45px;
+    float:right;
+    color: darkgray;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+}
+#new-task-form{
+    display: flex;
+}
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#input{
+    flex: 1 1 0%;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: black;
+    font-size: 1.25rem;
+}
+
+#input::placeholder{
+    color: var(--grey);
+}
+
+#submit{
+    color:black;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color:white;
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#submit:hover{
+    opacity: 0.8;
+}
+
+#submit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    border:2px solid black;
+    border-radius: 10px;
+
+    
+}
+.container{
+    background-image: linear-gradient(rgb(51, 255, 0), rgb(37, 192, 231));
+    /* background-image: linear-gradient(red,green,orange, yellow); */
+    
+}
+.task-list{
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#content .task {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/img.jfif);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
+}
+#content .task .content {
+    flex: 1 1 0%;
+}
+
+
+#content .task .content .text{
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#content .task .content .text:not(:read-only){
+    color: var(--pink);
+}
+
+#content .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+
+.task .actions button:active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    background-color: #616f8e;
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+    border-radius: 1rem;
+    color:white;
+
+}
+.task .actions .delete{
+    color: crimson;
+
+}
